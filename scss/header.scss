@@ -1,132 +1,40 @@
 @use './variables' as *;
 
-
 .site-header {
-    background: #f8f9fc;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-    position: relative;
-    z-index: 1000;
-  
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-  
-    .main-nav {
-      flex: 1;
-      ul {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-  
-        li a {
-          text-decoration: none;
-          color: #000;
-          font-weight: 500;
-          font-size: 0.95rem;
-        }
-      }
-    }
-  
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-  
-      .outline-btn {
-        border: 1px solid #3b00b9;
-        background: transparent;
-        color: #3b00b9;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        font-weight: 500;
-      }
-  
-      .filled-btn {
-        background: #3b00b9;
-        color: #fff;
-        padding: 0.5rem 1rem;
-        border: none;
-        border-radius: 5px;
-        font-weight: 500;
-      }
-    }
-  
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 4px;
-      cursor: pointer;
-      span {
-        width: 25px;
-        height: 3px;
-        background: #000;
-      }
-    }
-  
-    .sidebar {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 250px;
-      height: 100vh;
-      background: #fff;
-      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-      transition: right 0.3s ease;
-      z-index: 999;
-  
-      &.open {
-        right: 0;
-      }
-  
-      .sidebar-content {
-        padding: 2rem;
-  
-        button#closeSidebar {
-          background: none;
-          border: none;
-          font-size: 2rem;
-          position: absolute;
-          top: 1rem;
-          right: 1rem;
-          cursor: pointer;
-        }
-  
-        ul {
-          list-style: none;
-          padding: 0;
-          margin-top: 3rem;
-  
-          li {
-            margin-bottom: 1.5rem;
-  
-            a {
-              text-decoration: none;
-              color: #333;
-              font-size: 1.1rem;
-              font-weight: 500;
-            }
-          }
-        }
-      }
-    }
-  
-    @media (max-width: 768px) {
-      .main-nav,
-      .cta-buttons {
-        display: none;
-      }
-  
-      .hamburger {
-        display: flex;
-      }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  &.fixed-header{
+    position: fixed;
+    background:$white;
+    .navbar {
+      padding: 12px 0;
     }
   }
-  
+  .navbar{
+    padding: 40px 0;
+  }
+  .navbar-nav{
+    .nav-item{
+      margin-left: 5px;
+    }
+    .nav-link{
+      color: $black;
+      font-size: 16px;
+      line-height: normal;
+      padding: 13px 15px;
+    }
+  }
+  .btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 22.5px;
+    border-color: $theme-color;
+    line-height: normal;
+    margin-left: 35px;
+  }
+  .btn-primary{
+    background-color: $theme-color;
+  }
+}

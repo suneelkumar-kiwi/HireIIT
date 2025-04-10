@@ -1,0 +1,148 @@
+@use './variables' as *;
+
+// Banner section style
+.banner-section{
+    padding-top: 170px;
+    background: #f7f9fc url(../img/curved-bg-img.svg) top right no-repeat;
+}
+.banner-content{
+    max-width: 580px;
+    padding: 26px 0;
+    h1{
+        color: $primary-color;
+        font-family: $heading-font;
+        font-size: 54px;
+        font-weight: 700;
+        line-height: 111%;
+        margin-bottom: 48px;
+    }
+    p{
+        color: $primary-color;
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 50px;
+    }
+    .btn-primary{
+        border-radius: 34.5px;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: normal;
+        padding: 20px 75px;
+    }
+}
+.trusted-by{
+    margin-top: 30px;
+    .heading{
+        color: $primary-color;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: normal;
+        display: block;
+        margin-bottom: 10px;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        li{
+        color: $primary-color;
+        font-size: 10px;
+        line-height: normal;
+        }
+    }
+    h6{
+        margin: 24px 0 0;
+        color: $primary-color;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+
+// Verified Candidate Section Start
+.verified-candidate{
+    padding-top: 100px;
+    .section-head{
+        max-width: 1022px;
+        margin: 0 auto 30px;
+        text-align: center;
+        h2{
+            color: $primary-color;
+            font-family: $heading-font;
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 120%;
+            margin-bottom: 28px;
+        }
+        p{
+            color: $primary-color;
+            font-size: 18px;
+            line-height: normal;
+        }
+    }
+}
+
+// Silder Style Start
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin: 2rem auto;
+    gap: 1rem;
+    button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1rem;
+      font-size: 1.5rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      &:hover:not(:disabled) {
+        background-color: #555;
+      }
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+  core-scroll.scroll-content {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE 10+
+    &::-webkit-scrollbar {
+      display: none; // Chrome/Safari
+    }
+    .item {
+      flex: 0 0 calc(33.333% - 1rem); // 3 items per view
+      margin-right: 1rem;
+      background: #eee;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+  // Responsive breakpoints
+  @media (max-width: 900px) {
+    core-scroll.scroll-content .item {
+      flex: 0 0 calc(50% - 1rem); // 2 items per view
+    }
+  }
+  @media (max-width: 600px) {
+    core-scroll.scroll-content .item {
+      flex: 0 0 100%; // 1 item per view
+      margin-right: 0;
+    }
+  }

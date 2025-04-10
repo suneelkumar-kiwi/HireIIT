@@ -45,3 +45,20 @@ body {
           color: $primary-color;
       }
   }
+  .container{
+    @include xx-large-devices{
+      max-width: 1260px;
+    }
+  }
+  .btn {
+    &:not(.btn-outline-primary){
+      background-color: $theme-color;
+      border-color: $theme-color;
+    }
+  }
+  .btn-outline-primary{
+    color: $theme-color;
+    &:hover, &:active{
+      color: $white;
+    }
+  }
