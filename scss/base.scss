@@ -1,4 +1,5 @@
 @use './variables' as *;
+
 *{
   margin: 0;
   padding: 0;
@@ -19,14 +20,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
 }
+.container{
+  @include xx-large-devices{
+    max-width: 1260px;
+  }
+}
 
 /* BASIC TYPOGRAPHY
   ============================================= */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
+  h1, h2, h3, h4, h5 {
       word-wrap: break-word;
       line-height: normal;
       font-family: $heading-font;
@@ -45,11 +47,6 @@ body {
           color: $primary-color;
       }
   }
-  .container{
-    @include xx-large-devices{
-      max-width: 1260px;
-    }
-  }
   .btn {
     &:not(.btn-outline-primary){
       background-color: $theme-color;
@@ -60,5 +57,22 @@ body {
     color: $theme-color;
     &:hover, &:active{
       color: $white;
+    }
+  }
+  .heading-shape{
+    position: relative;
+    &::after{
+      content: "";
+      background: url(../img/text-shadow-img.svg) no-repeat;
+      width: 280px;
+      height: 12px;
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+      @include medium-devices{
+        width: 336px;
+        height: 50px;
+        bottom: -55px;
+      }
     }
   }

@@ -5,15 +5,45 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 11;
   &.fixed-header{
     position: fixed;
-    background:$white;
+    &::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(40px);
+      z-index: -1;
+    }
     .navbar {
       padding: 12px 0;
     }
   }
+  .navbar-brand{
+    img{
+      max-width: 100px;
+      @include medium-devices{
+        max-width: 100%;
+      }
+    }
+  }
+  .navbar-toggler{
+    border-radius: 0;
+    border-color: rgba(16, 90, 165, 0.21);
+    box-shadow: none;
+  }
   .navbar{
-    padding: 40px 0;
+    padding: 20px 0;
+    @include medium-devices{
+      padding: 30px 0;
+    }
+    @include large-devices{
+      padding: 40px 0;
+    }
   }
   .navbar-nav{
     .nav-item{
@@ -25,16 +55,58 @@
       line-height: normal;
       padding: 13px 15px;
     }
+    .dropdown-menu {
+      border: none;
+      box-shadow: 0 4px 52px 0 rgba(0, 0, 0, .07);
+      min-width: 225px;
+      margin-top: 10px;
+      padding: 20px 0;
+      border-radius: 20px;
+    }
+    .dropdown-item{
+      padding: 10px 20px;
+      &:focus{
+        background-color: $theme-color;
+      }
+    }
   }
   .btn {
-    padding: 12px 30px;
-    font-size: 16px;
+    padding: 10px 26px;
+    font-size: 15px;
     border-radius: 22.5px;
     border-color: $theme-color;
     line-height: normal;
-    margin-left: 35px;
+    @include large-devices{
+      margin-left: 35px;
+      padding: 12px 30px;
+      font-size: 16px;
+    }
+  }
+  .cta-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    @include large-devices{
+      margin-top: 0;
+    }
   }
   .btn-primary{
     background-color: $theme-color;
+  }
+  .navbar-collapse{
+    display: none;
+    @include large-devices{
+      display: block;
+    }
+    &.show{
+      display: block;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 300px;
+      background-color: $white;
+      padding: 40px 15px;
+    }
   }
 }

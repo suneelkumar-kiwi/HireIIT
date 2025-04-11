@@ -20,6 +20,12 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Countory Select style -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css'>
+
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -69,12 +75,12 @@
       <div class="row">
         <div class="col-md-5 order-md-1">
           <div class="banner-thumbnail">
-            <img src="img/emp-img.png" alt="Get Hired" />
+            <img class="img-fluid" src="img/emp-img.png" alt="Get Hired" />
           </div>
         </div>
         <div class="col-md-7 order-md-0">
           <div class="banner-content">
-            <h1> The Right Place to Grow Your Career & Get Hired </h1>
+            <h1 class="heading-shape"> The Right Place to Grow Your Career & Get Hired </h1>
             <p> Join thousands of IIT-certified professionals getting discovered by top companies, landing roles that
               match their skills, and growing with a platform built for their success. </p>
             <a class="btn btn-primary" href="">Get Hired</a>
@@ -98,11 +104,11 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section-head">
-              <h2> Discover Verified IIT-Certified Candidates Across In-Demand Skills </h2>
+              <h2 class="heading-shape"> Discover Verified IIT-Certified Candidates Across In-Demand Skills </h2>
               <p> Looking for AI experts, UX designers, or cloud architects? Our platform helps you connect with IIT-certified professionals so you can hire the best with confidence. </p>
           </div>
           <div class="search-skills">
-            <form method="post">
+            <form>
               <input type="text" class="form-control" placeholder="Try UI Designer">
               <button type="submit"> <img src="img/search.svg" alt="Search Icon" /> </button>
             </form>
@@ -116,27 +122,377 @@
               <li> Product Manager </li>
             </ul>
           </div>
-          <div class="slider-container">
-            <button id="prevBtn">‹</button>
-            <core-scroll id="myScroll" class="scroll-content">
-              <div class="item">Item 1</div>
-              <div class="item">Item 2</div>
-              <div class="item">Item 3</div>
-              <div class="item">Item 4</div>
-              <div class="item">Item 5</div>
-            </core-scroll>
-            <button id="nextBtn">›</button>
+        </div>
+      </div>
+      <div class="swiper profile-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="candidate-card">
+              <img class="img-fluid" src="img/profile-cover.jpg" alt="" />
+              <div class="user-info">
+                <div class="user-thumb">
+                  <img class="user-img" src="img/user-thumb.png" alt="User Thumb" />
+                  <img class="verified-icon" src="img/verified.svg" alt="Verified Icon" />
+                </div>
+                <h6> Ramesh Yadav </h6>
+                <p> UI Designer </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="candidate-card">
+              <img class="img-fluid" src="img/profile-cover.jpg" alt="" />
+              <div class="user-info">
+                <div class="user-thumb">
+                  <img class="user-img" src="img/user-thumb.png" alt="User Thumb" />
+                  <img class="verified-icon" src="img/verified.svg" alt="Verified Icon" />
+                </div>
+                <h6> Ramesh Yadav </h6>
+                <p> UI Designer </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="candidate-card">
+              <img class="img-fluid" src="img/profile-cover.jpg" alt="" />
+              <div class="user-info">
+                <div class="user-thumb">
+                  <img class="user-img" src="img/user-thumb.png" alt="User Thumb" />
+                  <img class="verified-icon" src="img/verified.svg" alt="Verified Icon" />
+                </div>
+                <h6> Ramesh Yadav </h6>
+                <p> UI Designer </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="candidate-card">
+              <img class="img-fluid" src="img/profile-cover.jpg" alt="" />
+              <div class="user-info">
+                <div class="user-thumb">
+                  <img class="user-img" src="img/user-thumb.png" alt="User Thumb" />
+                  <img class="verified-icon" src="img/verified.svg" alt="Verified Icon" />
+                </div>
+                <h6> Ramesh Yadav </h6>
+                <p> UI Designer </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="candidate-card">
+              <img class="img-fluid" src="img/profile-cover.jpg" alt="" />
+              <div class="user-info">
+                <div class="user-thumb">
+                  <img class="user-img" src="img/user-thumb.png" alt="User Thumb" />
+                  <img class="verified-icon" src="img/verified.svg" alt="Verified Icon" />
+                </div>
+                <h6> Ramesh Yadav </h6>
+                <p> UI Designer </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="candidate-card">
+              <img class="img-fluid" src="img/profile-cover.jpg" alt="" />
+              <div class="user-info">
+                <div class="user-thumb">
+                  <img class="user-img" src="img/user-thumb.png" alt="User Thumb" />
+                  <img class="verified-icon" src="img/verified.svg" alt="Verified Icon" />
+                </div>
+                <h6> Ramesh Yadav </h6>
+                <p> UI Designer </p>
+              </div>
+            </div>
           </div>
         </div>
+        <!-- Navigation buttons  -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
   </section>
 
+  <!-- Why Choose Us -->
+   <section class="why-choose-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-head">
+            <h2 class="heading-shape"> Why Choose HireIITCertified? </h2>
+            <p> HireIIT Certified is a dedicated job platform for IIT-certified students and professionals, connecting verified talent with top recruiters quickly and efficiently. </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="item">
+            <div class="icon">
+              <img src="img/self-confidence.svg" alt="User Thumb" />
+            </div>
+            <h6> Certified Talent You Can Trust </h6>
+            <p> Every profile on our platform belongs to an IIT-certified professional trained, verified, and ready to make an impact from day one. </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="item">
+            <div class="icon">
+              <img src="img/management.svg" alt="User Thumb" />
+            </div>
+            <h6> Personalized Career Support </h6>
+            <p> Our platform is designed to support your unique journey with personalized career assistance, exposure, and career-advancing opportunities beyond what traditional job boards can offer. </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="item">
+            <div class="icon">
+              <img src="img/access-control.svg" alt="User Thumb" />
+            </div>
+            <h6> Direct & Flexible Connections </h6>
+            <p> Talk directly with professionals or hiring teams on your terms, backed by a platform that supports ongoing career growth.  </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="item">
+            <div class="icon">
+              <img src="img/customer-service.svg" alt="User Thumb" />
+            </div>
+            <h6> Quality Matches, Not Just Listings </h6>
+            <p> We don’t just display resumes; we help align in-demand skills with relevant roles across top companies and key sectors. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
 
+   <!-- How It Works -->
+    <section class="how-it-work">
+      <div class="container">
+        <div class="d-flex justify-content-center">
+          <h2 class="heading-shape"> How It Works for You </h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="item">
+             <div class="box-header">
+                <div class="icon-box">
+                  <h5> 0<span>1</span> </h5>
+                  <img src="img/talent-search-icon.svg" alt="Icon" />
+                </div>
+                <h4> Create Your Profile </h4>
+             </div>
+             <p> Add your skills, certification details, and career interests. Stand out with a verified IIT-certified badge. </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="item">
+             <div class="box-header">
+                <div class="icon-box">
+                  <h5> 0<span>2</span> </h5>
+                  <img src="img/match-icon.svg" alt="Icon" />
+                </div>
+                <h4> Get Matched & Discovered </h4>
+             </div>
+             <p> Our platform highlights your profile to hiring partners and recommends relevant opportunities based on your skill set. </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="item">
+             <div class="box-header">
+                <div class="icon-box">
+                  <h5> 0<span>3</span> </h5>
+                  <img src="img/candidate-icon.svg" alt="Icon" />
+                </div>
+                <h4> Connect & Get Hired </h4>
+             </div>
+             <p> Respond to messages, schedule interviews, and land roles that align with your goals with support throughout your journey. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="success-story-section">
+      <div class="container">
+        <div class="section-heading d-flex justify-content-center">
+          <h2 class="heading-shape"> Success Stories That Matter </h2>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="swiper review-vertical-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>“We’ve worked with several platforms, but HireIITCertified stands out for the caliber of talent it brings. Their matchmaking process is fast, efficient, and deeply aligned with what growing companies need.  Their matchmaking process is fast, efficient, and deeply aligned with what growing companies need. ”</p>                    <h4>WebMob Technologies</h4>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>“We’ve worked with several platforms, but HireIITCertified stands out for the caliber of talent it brings. Their matchmaking process is fast, efficient, and deeply aligned with what growing companies need.”</p>
+                    <h4>KiwiTech</h4>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>“We’ve worked with several platforms, but HireIITCertified stands out for the caliber of talent it brings. Their matchmaking process is fast, efficient, and deeply aligned with what growing companies need. Their matchmaking process is fast, efficient, and deeply aligned with what growing companies need. ”</p>
+                    <h4>Neo Soft </h4>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>“We’ve worked with several platforms, but HireIITCertified stands out for the caliber of talent it brings. Their matchmaking process is fast, efficient, and deeply aligned with what growing companies need.”</p>
+                    <h4>Kia Moto </h4>
+                  </div>
+                </div>
+              </div>
+              <!-- Navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+              <!-- Pagination dots -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Helps You Get Hired -->
+    <section class="help-to-hire">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="query-form">
+              <h2 class="heading-shape"> Be Part of a Network That Helps You Get Hired </h2>
+              <form>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="firstName" class="form-label">First name*</label>
+                      <input type="text" id="firstName" class="form-control" placeholder="Your first name" name="firstName">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="lastName" class="form-label">Last name*</label>
+                      <input type="text" id="lastName" class="form-control" placeholder="Your last name" name="lastName">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="email" class="form-label">Email*</label>
+                      <input type="email" id="email" class="form-control" placeholder="Email address" name="email">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="company" class="form-label">Company*</label>
+                      <input type="text" id="company" class="form-control" placeholder="Where do you work?" name="company">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="country" class="form-label">Country</label>
+                      <input type="text" id="country" class="form-control" placeholder="Country Name" name="country">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="contactNo" class="form-label">Contact No.</label>
+                      <input type="text" id="contactNo" class="form-control" placeholder=" " name="contactNo">
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="message" class="form-label">Message</label>
+                      <textarea placeholder="Tell us a bit more about your request..." class="form-control" id="message" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary" type="submit"> Submit details </button>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img class="img-fluid d-none d-md-flex" src="img/group-img.jpg" alt=""  />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="footer-logo">
+              <a href=""><img src="img/logo.svg" alt="Hire IT Certified" /></a>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="foot-link-wrapper">
+              <div class="foot-links">
+                <h5>Services  </h5>
+                <ul>
+                  <li><a href="">Frontend Developers</a></li>
+                  <li><a href="">Backend Developers</a></li>
+                  <li><a href="">Cross Platform App Developers</a></li>
+                  <li><a href="">iOS Developers</a></li>
+                  <li><a href="">Android Developers</a></li>
+                </ul>
+              </div>
+              <div class="foot-links">
+                <h5>Skills  </h5>
+                <ul>
+                  <li><a href="">React Native</a></li>
+                  <li><a href="">React.js</a></li>
+                  <li><a href="">Python</a></li>
+                  <li><a href="">WordPress</a></li>
+                  <li><a href="">Flutter</a></li>
+                </ul>
+              </div>
+              <div class="foot-links">
+                <h5> Resources </h5>
+                <ul>
+                  <li><a href="">Find Talent</a></li>
+                  <li><a href="">Blog</a></li>
+                </ul>
+              </div>
+              <div class="foot-links">
+                <h5>Company  </h5>
+                <ul>
+                  <li><a href="">About Us</a></li>
+                  <li><a href="">Privacy Policy</a></li>
+                  <li><a href="">Terms of Use</a></li>
+                  <li><a href="">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <section class="copyright-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <p class="copy-text"> © 2025 HireIIT Certified. All rights reserved. Various trademarks held by their respective owners. </p>
+          </div>
+          <div class="col-md-3">
+            <ul class="social-links">
+              <li><a href=""> <img src="img/facebook.svg" alt="Facebook Icon" /> </a></li>
+              <li><a href=""> <img src="img/x-icon.svg" alt="X Icon" /> </a></li>
+              <li><a href=""> <img src="img/youTube.svg" alt="Youtube Icon" /> </a></li>
+              <li><a href=""> <img src="img/linkedIn.svg" alt="LinkedIn Icon" /> </a></li>
+              <li><a href=""> <img src="img/instagram.svg" alt="Instagram Icon" /> </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  <script src="https://static.nrk.no/core-components/major/10/core-scroll/core-scroll.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js'></script>
   <script src="js/script.js"></script>
 </body>
 
